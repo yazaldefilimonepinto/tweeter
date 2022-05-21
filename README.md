@@ -8,17 +8,20 @@ tweeter and a mini social network inspired by twitter.
 ## Bibliotecas e Frameworks:
 
 - Yarn
+- NextJs
+- Nodemailer
+- Redux
 - Typescript
 - Git
 - AWS-SDK
 - Socket.io
 - Axios
-- JsonWebToken
 - DotEnv
-- Ts-Node-Dev
 
 ## Metodologias:
 
+- Server Side Rendering(SRG)
+- Static Site Generation (SSG)
 - Convectional Commits
 - Single Responsibility
 - Open Closed
