@@ -4,8 +4,10 @@ import theme from './theme';
 
 export default createGlobalStyle`
   * {
+    outline: none;
     margin: 0;
     padding: 0;
+    border: none;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     color: ${props => props.theme.textColor};
