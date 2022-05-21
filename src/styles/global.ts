@@ -8,7 +8,7 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-
+    color: ${props => props.theme.textColor};
     ::-webkit-scrollbar {
       width: 8px;
       height: 5px;
@@ -23,7 +23,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${(props) => props.theme.grayColorAlt};
+    background: ${props => props.theme.grayColorAlt};
     font: 400 1rem 'Poppins', sans-serif;
   }
 
@@ -32,7 +32,7 @@ export default createGlobalStyle`
     max-width: 100%;
   }
 
-  ul {
+  ul, li{
     list-style: none;
   }
 
@@ -47,7 +47,7 @@ export default createGlobalStyle`
   .container {
     width: 100%;
     margin: 0 auto;
-    max-width: ${(props) => props.theme.maxContent};
+    max-width: ${props => props.theme.maxContent};
     padding: 0 1rem;
 
   }
