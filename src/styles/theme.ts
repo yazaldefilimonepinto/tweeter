@@ -1,0 +1,27 @@
+const theme = {
+  firstColor: '#2F80ED',
+  grayColor3: '#BDBDBD',
+  grayColor1: '#4F4F4F',
+  grayColor2: '#828282',
+  grayColorAlt: '#F2F2F2',
+  grayColorAlt2: '#FAFAFA',
+  textColor: '#333333',
+  white: '#FFFF',
+  dark: 'hsla(0, 0%, 0%, 1)',
+  green: 'hsla(145, 63%, 42%, 1)',
+  red: 'hsla(0, 79%, 63%, 1)',
+  bigFontWidth: 600,
+  normalFontWidth: 500,
+  smallFontWidth: 400,
+  biggestFontSize: '24px',
+  h1FontSize: '18px',
+  normalFontSize: '16px',
+  h2FontSize: '14px',
+  radius: '8px',
+  contentPostWidth: '745px',
+  contentPostHeight: '600px',
+  shadow: '0px 2px 4px rgba(0, 0, 0, 0.05)',
+  maxContent: '1073px',
+};
+
+export default theme;
