@@ -37,11 +37,8 @@ export function HomeHero() {
           </Button>
         </ProfileContainer>
       </HomeHeroBackGround>
-      <Modal isOpen={active}>
-        <div>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore debitis atque ex eligendi autem dignissimos aut hic iusto nihil
-          nesciunt! Hic iusto voluptatum molestiae dolorum quae soluta possimus distinctio velit.
-        </div>
+      <Modal closeMethod={handlerModal} isOpen={active}>
+        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
       </Modal>
     </Container>
   );

@@ -20,7 +20,7 @@ const theme = {
   radius: '8px',
   contentPostWidth: '745px',
   contentPostHeight: '600px',
-  shadow: '0px 2px 4px rgba(0, 0, 0, 0.05)',
+  shadow: '0px 2px 4px rgba(0, 0, 0, 0.5)',
   maxContent: '1073px',
 };
 
