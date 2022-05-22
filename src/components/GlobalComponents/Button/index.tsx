@@ -3,16 +3,16 @@ import { ReactNode } from 'react';
 import { Container } from './styles';
 
 interface ButtonProps {
-  children: ReactNode;
+  children?: ReactNode;
+  text: string;
 }
 
-function Button({ children }: ButtonProps) {
+function Button({ children, text }: ButtonProps) {
   return (
     <Container>
-      <h1>Button</h1>
-      {children}
+      {children} {text}
     </Container>
   );
-};
+}
 
 export default Button;
