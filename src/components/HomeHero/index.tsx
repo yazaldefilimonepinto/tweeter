@@ -22,12 +22,14 @@ export function HomeHero() {
             <ProfileInformation>
               <div>
                 <h2>Silvia Viegas</h2>
-                <ButtonFollow onClick={handlerModal}>
-                  <strong> 12k</strong> following
-                </ButtonFollow>
-                <ButtonFollow onClick={handlerModal}>
-                  <strong> 100k</strong> followers
-                </ButtonFollow>
+                <div>
+                  <ButtonFollow onClick={handlerModal}>
+                    <strong> 12k</strong> following
+                  </ButtonFollow>
+                  <ButtonFollow onClick={handlerModal}>
+                    <strong> 100k</strong> followers
+                  </ButtonFollow>
+                </div>
               </div>
               <p>Photographer & Filmmaker based in Copenhagen Denmark ☘ 🇲🇿 </p>
             </ProfileInformation>

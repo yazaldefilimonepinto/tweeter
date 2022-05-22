@@ -16,17 +16,14 @@ export const ModalContainer = styled.div<ModalContainerProps>`
   display: ${props => (props.isOpen ? 'flex' : 'none')};
   transition: all 0.3s ease;
   justify-content: center;
-  animation: activeModal 0.3s linear;
+  animation: activeModal 0.5s ease;
 
   @keyframes activeModal {
     0% {
       transform: scale(0);
       opacity: 0;
     }
-    50% {
-      transform: scale(0.5);
-      opacity: 0.5;
-    }
+
     100% {
       opacity: 1;
       transform: scale(1);

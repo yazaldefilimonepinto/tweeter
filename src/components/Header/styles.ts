@@ -14,12 +14,40 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0px 1rem;
+
+    @media screen and (max-width: 860px) {
+      justify-content: space-between;
+    }
   }
 `;
 export const Navigation = styled.ul`
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  svg {
+    display: none;
+  }
+  @media screen and (max-width: 860px) {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    /* padding: 1rem; */
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: ${props => props.theme.shadow};
+    bottom: 0px;
+    background-color: #fff;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    svg {
+      display: block;
+    }
+    .textLink {
+      display: none;
+    }
+  }
 `;
 export const HeaderProfile = styled.div`
   display: flex;
@@ -37,6 +65,14 @@ export const HeaderProfile = styled.div`
       border-radius: ${props => props.theme.radius};
     }
   }
+  @media screen and (max-width: 880px) {
+    > span {
+      display: none;
+    }
+    > button {
+      display: none;
+    }
+  }
   > span {
     cursor: pointer;
 
@@ -48,6 +84,11 @@ export const HeaderProfile = styled.div`
 `;
 export const HeaderLogo = styled.a`
   display: block;
+  @media screen and (max-width: 880px) {
+    .headerText {
+      display: none;
+    }
+  }
 `;
 export const HeaderModal = styled.div<HeaderModalProps>`
   position: fixed;
@@ -60,6 +101,10 @@ export const HeaderModal = styled.div<HeaderModalProps>`
   padding: 0.4rem;
   z-index: ${props => (props.isActive ? '1' : '.5')};
   top: ${props => (props.isActive ? '4.5rem' : '-100%')};
+  @media screen and (max-width: 880px) {
+    right: 0.5rem;
+  }
+  right: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -71,7 +116,6 @@ export const HeaderModal = styled.div<HeaderModalProps>`
       padding: 0.6rem 0.4rem;
       margin-left: 0.5rem;
       border-radius: ${props => props.theme.radius};
-
       &:hover {
         background-color: ${props => props.theme.grayColorAlt};
       }
