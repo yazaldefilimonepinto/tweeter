@@ -11,7 +11,7 @@ export const SignUpContent = styled.div`
 export const SignUpContainer = styled.section`
   background-color: ${props => props.theme.white};
   border-radius: 5px;
-  max-width: 800px;
+  /* max-width: 800px; */
   padding: 25px 40px 25px 40px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
   > form {

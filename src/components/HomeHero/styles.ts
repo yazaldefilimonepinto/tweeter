@@ -23,7 +23,7 @@ export const HomeHeroBackGround = styled.div<HomeHeroBackGroundProps>`
 export const ProfileContainer = styled.section`
   position: relative;
   bottom: 0px;
-  padding: 2rem;
+  padding: 2rem !important;
   min-height: 200px;
   box-shadow: ${props => props.theme.shadow};
   border-radius: ${props => props.theme.radius};
@@ -89,6 +89,7 @@ export const ProfileInformation = styled.section`
       text-align: center;
       margin-bottom: 1rem;
       max-width: 30ch;
+      padding: 0px 0.8rem;
     }
   }
 `;
@@ -97,7 +98,7 @@ export const ProfileImg = styled.div`
   padding: 2px;
   border-radius: ${props => props.theme.radius};
   position: absolute;
-  top: -2.5rem;
+  top: -5.5rem;
   width: 10rem;
   height: 10rem;
   > img {

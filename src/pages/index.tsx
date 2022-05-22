@@ -3,6 +3,7 @@ import Head from 'next/head';
 import 'aos/dist/aos.css';
 import { Header } from '../components/Header';
 import { HomeHero } from '../components/HomeHero';
+import { HomeMaster } from '../components/HomeMaster';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <main>
         <HomeHero />
+        <HomeMaster />
       </main>
     </>
   );

@@ -1,6 +1,5 @@
 import { lighten } from 'polished';
 import { createGlobalStyle } from 'styled-components';
-import theme from './theme';
 
 export default createGlobalStyle`
   * {
@@ -32,6 +31,9 @@ export default createGlobalStyle`
   img {
     width: 100%;
     max-width: 100%;
+    user-select: none;
+    pointer-events: none;
+    cursor: default;
   }
 
   ul, li{
@@ -51,7 +53,14 @@ export default createGlobalStyle`
     margin: 0 auto;
     max-width: ${props => props.theme.maxContent};
     padding: 0 1rem;
-
+    @media screen and (max-width: 880px) {
+      padding: 1rem;
+      width: 80%;
+    }
+    @media screen and (max-width: 450px) {
+      padding: .8rem 0px;
+      width: 90%;
+   }
   }
 
 `;
