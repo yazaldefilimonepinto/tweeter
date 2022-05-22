@@ -9,7 +9,7 @@ export const NavLinkContainer = styled.li<NavLinkProps>`
     position: relative;
     transition: 0.5s;
     font-weight: ${props => props.theme.bigFontWidth};
-    color: ${props => (props.isActive ? props.theme.firstColor : props.theme.textColor)};
+    color: ${props => (props.isActive ? props.theme.firstColor : props.theme.grayColor2)};
     &::after {
       content: '';
       display: ${props => (props.isActive ? 'block' : 'none')};

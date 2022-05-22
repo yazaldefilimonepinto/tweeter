@@ -1,7 +1,16 @@
-import { HeaderContainer, Navigation, HeaderProfile, HeaderLogo } from './styles';
+import { HeaderContainer, Navigation, HeaderProfile, HeaderLogo, HeaderModal } from './styles';
 import NavLink from './components/NavLink';
 import profile from '../../assets/images/profile.jpeg';
+import LoginOut from '../../assets/icons/logn-out.svg';
+import UserCircle from '../../assets/icons/bxs-user-circle.svg';
+import GroupSvg from '../../assets/icons/bxs-group.svg';
+import { useState } from 'react';
 export function Header() {
+  const [activeModal, SetActiveModal] = useState(false);
+
+  function handlerClick() {
+    SetActiveModal(!activeModal);
+  }
   return (
     <HeaderContainer>
       <div className="headerContainer">
@@ -31,10 +40,37 @@ export function Header() {
           <NavLink title="Bookmarks" path="/bookmarks" />
         </Navigation>
         <HeaderProfile>
-          <div>
+          <div className="profile" onClick={handlerClick}>
             <img src={profile} alt="profile" />
           </div>
-          <span>Silvia Viegas</span>
+          <span onClick={handlerClick}>Silvia Viegas</span>
+          <button onClick={handlerClick}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#000000" width="24" height="24">
+              <path d="m11.998 17 7-8h-14z"></path>
+            </svg>
+          </button>
+          <HeaderModal isActive={activeModal}>
+            <ul>
+              <li>
+                <a href="">
+                  <UserCircle />
+                  My profile
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <GroupSvg />
+                  Group Chat
+                </a>
+              </li>
+              <li>
+                <a href="">Settings</a>
+              </li>
+            </ul>
+            <a href="">
+              <LoginOut /> Log Out
+            </a>
+          </HeaderModal>
         </HeaderProfile>
       </div>
     </HeaderContainer>
