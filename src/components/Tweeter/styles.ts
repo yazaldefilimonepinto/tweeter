@@ -114,9 +114,9 @@ export const TweeterComment = styled.div`
   display: grid;
   grid-template-columns: 1fr max-content;
   place-items: center;
-  background-color: ${({ theme }) => theme.grayColorAlt};
+  background-color: ${({ theme }) => theme.grayColorAlt2};
   border-radius: ${({ theme }) => theme.radius};
-  border: 2px solid ${({ theme }) => theme.grayColor2};
+  border: 2px solid ${({ theme }) => theme.grayColorAlt};
   height: 3rem;
   > textarea {
     resize: none;
@@ -132,6 +132,7 @@ export const TweeterComment = styled.div`
     padding: 0.5rem;
     > svg {
       width: 25px;
+      fill: ${({ theme }) => theme.grayColor3};
     }
   }
 `;
