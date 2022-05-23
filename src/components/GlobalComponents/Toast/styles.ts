@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 type ToastContainerProps = {
-  isOpenToast: boolean;
+  isOpenToast?: boolean;
   ThisColor: string;
 };
 export const ToastContainer = styled.div<ToastContainerProps>`
@@ -59,7 +59,7 @@ export const ToastContainer = styled.div<ToastContainerProps>`
     }
   }
 `;
-export const ToastContent = styled.div`
+export const ToastContent = styled.div<ToastContainerProps>`
   display: flex;
   align-items: center;
   > div {
@@ -91,7 +91,7 @@ export const ToastMessage = styled.div`
   }
 `;
 
-export const ToastProgress = styled.div`
+export const ToastProgress = styled.div<ToastContainerProps>`
   position: absolute;
   bottom: 0px;
   left: 0px;

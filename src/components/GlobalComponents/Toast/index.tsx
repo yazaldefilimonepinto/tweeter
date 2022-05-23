@@ -15,7 +15,7 @@ interface ToastProps {
 }
 
 export function Toast({ isOpenToast, closeToast, message, status, typeStatus }: ToastProps) {
-  const [color, SetColor] = useState<String>('#2F80ED');
+  const [color, SetColor] = useState<string>('#2F80ED');
   function handerToastClose() {
     closeToast();
   }
@@ -32,8 +32,8 @@ export function Toast({ isOpenToast, closeToast, message, status, typeStatus }: 
   }
 
   return (
-    <ToastContainer isOpenToast={isOpenToast} Thiscolor={color}>
-      <ToastContent>
+    <ToastContainer isOpenToast={isOpenToast} ThisColor={color}>
+      <ToastContent ThisColor={color}>
         <div>
           <CheckCircle />
         </div>
@@ -45,7 +45,7 @@ export function Toast({ isOpenToast, closeToast, message, status, typeStatus }: 
       <button onClick={handerToastClose}>
         <XCircle />
       </button>
-      <ToastProgress />
+      <ToastProgress ThisColor={color} />
     </ToastContainer>
   );
 }
