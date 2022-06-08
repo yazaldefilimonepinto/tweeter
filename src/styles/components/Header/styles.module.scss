@@ -1,8 +1,23 @@
+@import '../../main/variables.scss';
+
 .header {
   width: 100%;
   position: fixed;
-  bottom: 0;
+  top: 0;
   left: 0;
-  z-index: var(--z-fixed);
-  background-color: var(--body-color);
+  z-index: $z-fixed;
+  background-color: $body-color;
+  transition: 0.4s;
+}
+.nav {
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__img {
+  width: 32px;
+}
+.profile{
+  display:flex;
 }
