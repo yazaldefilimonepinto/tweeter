@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import styles from '@/styles/components/Header/styles.module.scss';
 
 interface HeaderProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 export function Header({ children }: HeaderProps) {
