@@ -8,6 +8,7 @@ export default function Home() {
         <title>Tweeter</title>
       </Head>
       <Header />
+
       <main></main>
       <footer></footer>
     </div>

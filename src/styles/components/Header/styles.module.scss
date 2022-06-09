@@ -85,10 +85,20 @@
 .icon {
   font-size: $normal-font-size;
 }
-.active__link {
+.activeLink {
   position: relative;
   color: $first-color;
   transition: 0.4s;
+  &::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -2px;
+    background-color: $first-color;
+  }
 }
 @media screen and (max-width: 360px) {
   .nav__name {

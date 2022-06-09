@@ -1,5 +1,6 @@
 import styles from '@/styles/components/Header/styles.module.scss';
 import profile from '@/assets/images/profile.jpeg';
+import { NavLink } from './Link';
 export function Header() {
   return (
     <header className={styles.header}>
@@ -24,24 +25,21 @@ export function Header() {
         <div className={styles.nav__menu}>
           <ul className={styles.nav__list}>
             <li>
-              <a className={styles.nav__link} href="#home">
+              <NavLink title="Home" path="/">
                 <i className={`${styles.nav__icon} bx bx-home`}></i>
-                <span className={styles.nav__name}>Home</span>
-              </a>
+              </NavLink>
             </li>
 
             <li>
-              <a className={styles.nav__link} href="#explore">
+              <NavLink title="Explore" path="/explore">
                 <i className={`${styles.nav__icon} bx bx-bolt-circle`}></i>
-                <span className={styles.nav__name}>Explore</span>
-              </a>
+              </NavLink>
             </li>
 
             <li>
-              <a className={styles.nav__link} href="#bookmarks">
+              <NavLink title="BookMarks" path="/bookmarks">
                 <i className={`${styles.nav__icon} bx bx-bookmark`}></i>
-                <span className={styles.nav__name}>BookMarks</span>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
