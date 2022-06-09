@@ -3,13 +3,12 @@
 $header-height: 3rem;
 
 /*========== Colors ==========*/
-$sat: 63%;
 
 $first-color: #2f80ed;
 $title-color: #000000;
 $text-color: #4f4f4f;
 $body-color: #ffffff;
-$container-color: #bdbdbd;
+$container-color: hsl(0, 0%, 95%);
 $gray-color-alt: #f2f2f2;
 $gray-color-text: #828282;
 $green-color: #27ae60;
@@ -21,11 +20,11 @@ $content: 1060px;
 $body-font: 'Poppins', Arial, Helvetica, sans-serif;
 
 /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-$big-font-size: 2rem;
-$h1-font-size: 1.5rem;
-$h2-font-size: 1.25rem;
-$h3-font-size: 1.125rem;
-$normal-font-size: 0.938rem;
+$big-font-size: 2.25rem;
+$h1-font-size: 1.75rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.15rem;
+$normal-font-size: 1rem;
 $small-font-size: 0.813rem;
 $smaller-font-size: 0.75rem;
 
