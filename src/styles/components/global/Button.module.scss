@@ -1,0 +1,36 @@
+@import '../../main/variables.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  max-width: 200px;
+  width: 100%;
+  border: none;
+  font-size: $normal-font-size;
+  outline: none;
+  color: #fff;
+  border-radius: 5px;
+  margin: 25px 0;
+  background-color: $first-color;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  border-right-color: #fff;
+  border-radius: 50%;
+  animation: spinner 0.2s linear infinite;
+  @keyframes spinner {
+    0% {
+      transform: rotate(360deg);
+    }
+  }
+}
