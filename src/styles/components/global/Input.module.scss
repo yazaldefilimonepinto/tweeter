@@ -1,0 +1,31 @@
+@import '../../main/variables.scss';
+
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  min-width: 270px;
+  > input {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+    &:focus {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+      border-color: $first-color;
+    }
+  }
+}
+
+.error {
+  > label {
+    color: $red-color;
+  }
+  > input {
+    border-color: $red-color;
+  }
+}
