@@ -1,0 +1,64 @@
+@import '../../main/variables.scss';
+
+.root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $first-color;
+}
+.container {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.header {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: $title-color;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    height: 3px;
+    width: 27px;
+    border-radius: 8px;
+    background-color: $first-color;
+  }
+}
+.form {
+  position: relative;
+  // min-height: 490px;
+  background-color: #fff;
+  margin-top: 16px;
+}
+.details {
+  margin-top: 10px;
+  > span {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 6px 0;
+    color: $text-color;
+  }
+}
+.fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.fieldsMobile {
+  flex-direction: column;
+}
+
+.formContainer {
+}
+.personal {
+}
