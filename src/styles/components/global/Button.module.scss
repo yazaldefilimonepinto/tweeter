@@ -19,6 +19,11 @@
   justify-content: center;
   gap: 0.5rem;
   cursor: pointer;
+  transition: 0.4s;
+  &:hover {
+    background-color: $first-color-alt;
+    color: rgb(230, 228, 228);
+  }
 }
 .spinner {
   width: 20px;
