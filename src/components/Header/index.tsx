@@ -1,7 +1,14 @@
 import styles from '@/styles/components/Header/styles.module.scss';
 import profile from '@/assets/images/profile.jpeg';
 import { NavLink } from './Link';
+import { useState } from 'react';
+import Link from 'next/link';
 export function Header() {
+  const [active, SetActive] = useState(false);
+
+  function handlerClick() {
+    SetActive(!active);
+  }
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
@@ -44,13 +51,48 @@ export function Header() {
           </ul>
         </div>
 
-        <div className={styles.profile}>
+        <div onClick={handlerClick} className={active ? `${styles.navigation} ${styles.active}` : styles.navigation}>
+          <div className={styles.user}>
+            <div>
+              <img src={profile.src} alt="profile" />
+            </div>
+            <section className={styles.modal}>
+              <div>
+                <h3>Yazalde Filimone</h3>
+                <span></span>
+                <ul>
+                  <li>
+                    <Link href="/profile">
+                      <a>
+                        <i className="bx bx-user"></i>
+                        Profile
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/settings">
+                      <a>
+                        <i className="bx bx-code-alt"></i>
+                        Settings
+                      </a>
+                    </Link>
+                  </li>
+                  <li>
+                    <i className="bx bx-log-out-circle"></i>
+                    Log Out
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+        </div>
+        {/* <div className={styles.profile}>
           <div className={styles.nav__img}>
             <img src={profile.src} alt="profile" />
           </div>
           <span className={styles.profile__name}>Daniel Jensen</span>
           <i className={`${styles.icon} bx bx-caret-down`}></i>
-        </div>
+        </div> */}
       </nav>
     </header>
   );
