@@ -1,0 +1,37 @@
+@import '../../main/variables.scss';
+
+.container {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: $shadow;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  > p {
+    font-weight: 600;
+    color: $text-color;
+    width: 100%;
+    border-bottom: 2px solid $gray-color-alt;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.tag {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  > h2 {
+    font-size: $h3-font-size;
+    color: $text-color;
+  }
+  > span {
+    color: $gray-color-text;
+    font-size: 0.98rem;
+  }
+}
