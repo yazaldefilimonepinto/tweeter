@@ -26,8 +26,7 @@ export function NavLink({ title, path, includes = false, children }: Props) {
     <Link href={path}>
       <a className={isActive ? `${styles.nav__link} ${styles.activeLink}` : `${styles.nav__link}`}>
         {children}
-        <span className={styles.nav__name}></span>
-        {title}
+        <span className={styles.nav__name}>{title}</span>
       </a>
     </Link>
   );
