@@ -1,0 +1,57 @@
+@import '../../main/variables.scss';
+
+.container {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: $shadow;
+  padding: 1rem 2rem;
+  border-radius: 0.4rem;
+  > p {
+    font-weight: 600;
+    color: $text-color;
+    width: 100%;
+    border-bottom: 2px solid $gray-color-alt;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.profile {
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button {
+    width: max-content;
+    height: max-content;
+    padding: 0.2rem 0.5rem;
+  }
+}
+.photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  > img {
+    width: 50px;
+
+    height: 50px;
+    object-fit: cover;
+  }
+}
+.username {
+  display: flex;
+  flex-direction: column;
+  > span {
+    &:first-child {
+      font-weight: 600;
+    }
+    &:last-child {
+      color: $gray-color-text;
+      font-size: 0.9rem;
+    }
+  }
+}
