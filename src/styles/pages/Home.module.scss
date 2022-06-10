@@ -1,0 +1,158 @@
+@import '../main/variables.scss';
+.article {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+.sidebar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+.createTweet {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: $shadow;
+  height: max-content;
+  > p {
+    padding: 0.5rem;
+    width: 100%;
+    border-bottom: 2px solid $gray-color-alt;
+  }
+}
+
+.tweetContent {
+  padding: 0.5rem;
+}
+.tweetArea {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin: 1rem 0px;
+  > div {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    > img {
+      object-fit: cover;
+      height: 50px;
+    }
+  }
+  > textarea {
+    resize: none;
+    min-height: 5rem;
+    &::-webkit-scrollbar-thumb {
+      background: $first-color;
+      // width: 2px;
+      width: 10px;
+    }
+    &::-webkit-scrollbar {
+      background: $gray-color-text;
+      cursor: pointer;
+      width: 5px;
+      border-radius: 0.2rem;
+    }
+    border: none;
+    width: 100%;
+    font-size: $normal-font-size;
+    color: $text-color;
+    font-family: $body-font;
+    padding: 1rem;
+    outline: none;
+  }
+}
+.tweetButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    > button {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      background: none;
+      border: none;
+      color: $first-color;
+      font-family: $body-font;
+      > i {
+        color: $first-color;
+        font-size: 1.4rem;
+      }
+    }
+  }
+  button {
+    margin: 0px !important;
+    width: max-content;
+    padding: 0.5rem 1rem;
+  }
+}
+.buttonModal {
+  position: relative;
+}
+
+.modal {
+  z-index: $z-modal;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: max-content;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  left: -46px;
+  transition: 0.2s;
+  top: 5rem;
+  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.14);
+  background: #fff;
+  > div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  h3 {
+    font-size: $normal-font-size;
+    font-weight: 600;
+    color: $text-color;
+  }
+  span {
+    color: $gray-color-text;
+  }
+  ul {
+    margin-top: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.5rem;
+    a,
+    li {
+      button {
+        background: none;
+        border: none;
+        display: flex;
+        // align-items: center;
+        font-size: 0.89rem;
+        font-family: $body-font;
+        color: #333;
+
+        gap: 0.4rem;
+        > i {
+          font-size: 1.2rem;
+        }
+        &:hover {
+          color: $first-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.activeModal {
+  visibility: visible;
+  opacity: 1;
+}
