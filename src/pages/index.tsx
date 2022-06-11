@@ -4,9 +4,16 @@ import React, { FunctionComponent, useState } from 'react';
 import styles from '@/styles/pages/Home.module.scss';
 import profile from '@/assets/images/profile.jpeg';
 import { Tags } from '@/components/Tags';
-import { fakeTag, fakeUser } from '@/fake';
 import { WhoFollow } from '@/components/Whofollow';
-const Home: FunctionComponent = () => {
+import { HomeSidebar } from '@/components/homeSidebar';
+// import photo from '@/assets/images/profile.jpeg';
+// import banner from '@/assets/images/banner.jpg';
+
+type HomeProps = {
+  fakeTag: any;
+  fakeUser: any;
+};
+const Home: FunctionComponent<HomeProps> = () => {
   const [activeModel, SetActiveModel] = useState(false);
 
   function handlerModal() {
@@ -15,7 +22,7 @@ const Home: FunctionComponent = () => {
   return (
     <Container>
       <article className={styles.article}>
-        <section className={styles.createTweet}>
+        {/* <section className={styles.createTweet}>
           <p>Tweet something</p>
           <div className={styles.tweetContent}>
             <div className={styles.tweetArea}>
@@ -57,13 +64,11 @@ const Home: FunctionComponent = () => {
               <Button text="Tweet" />
             </div>
           </div>
-        </section>
-        <section className={styles.sidebar}>
-          <Tags tags={fakeTag} />
-          <WhoFollow users={fakeUser} />
-        </section>
+        </section> */}
+        <HomeSidebar />
       </article>
     </Container>
   );
 };
+
 export default Home;
