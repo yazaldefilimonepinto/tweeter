@@ -50,7 +50,7 @@ $z-tooltip: 10;
 $z-fixed: 100;
 $z-modal: 1000;
 
-$shadow: 0px 1px 10px rgba(0, 0, 0, 0.2); /* Font size for large devices */
+$shadow: 0px 1px 2px rgba(0, 0, 0, 0.2); /* Font size for large devices */
 @media screen and (min-width: 968px) {
   $big-font-size: 3rem;
   $h1-font-size: 2.25rem;
