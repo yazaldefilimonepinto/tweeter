@@ -1,0 +1,74 @@
+@import '../main/variables.scss';
+.article {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 1rem;
+}
+.aside {
+  background: #fff;
+  padding: 1rem 0.5rem 1rem 0px;
+  box-shadow: $shadow;
+  border-radius: 0.4rem;
+  height: max-content;
+}
+.asideList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.asideChildren {
+  padding-left: 1rem;
+  font-weight: $font-semi-bold;
+  color: $gray-color-text;
+  position: relative;
+  height: 35px;
+  overflow: hidden;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    border-radius: 0px 40px 40px 0px;
+    width: 5px;
+    display: inline-block;
+    height: 35px;
+    background: $first-color;
+  }
+}
+.search {
+  background: #fff;
+  border-radius: 0.4rem;
+  display: flex;
+  height: max-content;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: $shadow;
+  > input {
+    height: 100%;
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    outline: none;
+  }
+  > i {
+    color: $gray-color-text;
+    font-size: 1.2rem;
+  }
+  > button {
+    width: max-content;
+    padding: 0.4rem 1rem;
+    font-weight: $font-medium;
+    margin: 0px;
+    height: auto;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.tweets {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
