@@ -21,7 +21,6 @@ export function NavLink({ title, path, includes = false, children }: Props) {
   }
 
   const isActive = verifyIfIsActive();
-  console.log(isActive);
   return (
     <Link href={path}>
       <a className={isActive ? `${styles.nav__link} ${styles.activeLink}` : `${styles.nav__link}`}>
