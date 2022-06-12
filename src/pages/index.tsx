@@ -22,7 +22,7 @@ const Home: FunctionComponent<HomeProps> = () => {
   return (
     <Container>
       <article className={styles.article}>
-        {/* <section className={styles.createTweet}>
+        <section className={styles.createTweet}>
           <p>Tweet something</p>
           <div className={styles.tweetContent}>
             <div className={styles.tweetArea}>
@@ -64,7 +64,7 @@ const Home: FunctionComponent<HomeProps> = () => {
               <Button text="Tweet" />
             </div>
           </div>
-        </section> */}
+        </section>
         <HomeSidebar />
       </article>
     </Container>

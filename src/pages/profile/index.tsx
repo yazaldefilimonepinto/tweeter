@@ -1,15 +1,21 @@
 import { Container } from '@/components/global/Container';
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useState } from 'react';
 import styles from '@/styles/pages/Profile.module.scss';
 
 import photo from '@/assets/images/profile.jpeg';
 import style from '@/styles/pages/Explore.module.scss';
 import { Button } from '@/components/global/Button';
 import { Tweet } from '@/components/Tweet';
+import { Modal } from '@/components/Modal';
+import { Followers } from '@/components/Followers';
 
 const Profile: FunctionComponent = () => {
   const bookmarksTag = ['Tweets', 'Tweets & replies', 'Media', 'Likes'];
+  const [openModalFollowers, SetOpenModalFollowers] = useState(false);
 
+  function handlerFollow() {
+    SetOpenModalFollowers(!openModalFollowers);
+  }
   return (
     <div>
       <article className={styles.profileContainer}>
@@ -21,12 +27,12 @@ const Profile: FunctionComponent = () => {
             <div className={styles.content}>
               <div className={styles.info}>
                 <h2>Daniel Jensen</h2>
-                <span>
+                <button onClick={handlerFollow}>
                   <strong>2,569</strong> Following
-                </span>
-                <span>
+                </button>
+                <button>
                   <strong>10.8K</strong> Followers
-                </span>
+                </button>
               </div>
               <p>Photographer & Filmmaker based in Copenhagen, Denmark ✵ 🇩🇰</p>
             </div>
@@ -62,6 +68,9 @@ const Profile: FunctionComponent = () => {
           </section>
         </article>
       </Container>
+      <Modal status={openModalFollowers}>
+        <Followers SetStatus={handlerFollow} />
+      </Modal>
     </div>
   );
 };

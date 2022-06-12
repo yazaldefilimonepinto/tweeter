@@ -66,3 +66,8 @@ button {
     margin: calc($header-height + 1rem) 0 0 0;
   }
 }
+i {
+  &:hover {
+    color: $first-color-alt;
+  }
+}
