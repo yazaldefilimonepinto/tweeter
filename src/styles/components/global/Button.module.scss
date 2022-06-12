@@ -19,6 +19,10 @@
   justify-content: center;
   gap: 0.5rem;
   cursor: pointer;
+  font-family: 'Noto Sans';
+  // font-size: 16px;
+  font-weight: $font-medium;
+  line-height: 22px;
   transition: 0.4s;
   &:hover {
     background-color: $first-color-alt;
