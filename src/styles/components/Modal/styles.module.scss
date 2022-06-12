@@ -9,4 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.4s;
+}
+
+.activeModal {
+  display: none;
 }
